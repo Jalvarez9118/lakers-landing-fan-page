@@ -1,0 +1,938 @@
+:root{
+    --lakerPurple: rgba(56, 21, 77, 0.856);
+    --lakerYellow: #fae330;
+    --lakerOrange: #FCB924;
+    --staplesRed: #D81C2B; 
+}
+
+
+*, body{
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Anton', sans-serif;
+}
+
+.page-container{
+    /* background-color: #3B2B46; */
+    height: 100%;
+}
+
+.container{
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+    background: #dedede;
+    position: relative;
+    padding: 0;
+}
+
+.main-banner{
+    height: 100vh;
+    position: relative;    
+}
+
+
+
+.main-banner img{
+    width: 100%; 
+    height: 100vh;
+    position: relative;
+
+    /* animation */
+    animation-duration: 3s;
+}
+
+.overlay{
+    animation-duration: 5s; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.2);   */
+    transition: 0.6s ease-out;  
+    
+}
+
+
+.overlay:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.centered{
+    visibility: hidden;
+    /* transition: 0.4s ease-out;  */
+}
+
+/* show text on hover with overlay */
+.overlay:hover .centered{
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+
+.chips{
+    color: #FCB924;
+    font-size: 4.5rem;
+}
+
+
+
+
+/* ********* YELLOW DIV DIVIDER ********************* */
+
+.divider{
+    padding: 5px;
+    background: #FCB924;
+}
+
+
+
+
+/* ************** LEBRON SECTION ***************** */
+
+.lebron-title h1{
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 2px 2px #FCB924;
+    text-transform: uppercase;
+    /* padding: 25px 0; */
+}
+
+.lebron-bio{
+    position: relative;
+    height: 500px;
+    /* background: rgba(216, 155, 64, 0.513); */
+}
+
+.left-div-bio{
+    /* background: rgba(255, 151, 151, 0.7); */
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.left-div-bio img{
+    width: 99%;
+    display:block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 14px;
+    transition: 0.6s ease-out; 
+}
+
+.lebron-overlay{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /*dim the background*/     
+    transition: 0.6s ease-out;  
+}
+
+.lebron-overlay:hover{
+    opacity: 1;
+    transition: 0.6s ease-in-out;   
+}
+
+.left-div-bio:hover img{
+    transform: scale(1.1);
+    transition: all 0.6s;
+}
+
+.right-div-bio{
+    /* background: rgba(151, 151, 255, 0.596); */
+    height: 500px;
+    width: 40%;
+    position: absolute;
+    right: 0;
+}
+
+.right-div-bio p{
+    width: 70%;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    color: #31096A;
+}
+
+/* ************** AD SECTION ***************** */
+
+.AD-bio{
+    background: rgba(56, 21, 77, 0.856);
+    height: 500px;
+}
+
+.left-div-bio-AD p{
+    width: 70%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    color: #FAE330;
+}
+
+.left-div-bio-AD{
+    /* background: rgba(255, 151, 151, 0.7); */
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    left: 0;
+}
+
+/* *** AD OVERLAY*** */
+.AD-overlay{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    transition: 0.6s ease-out;     
+}
+
+.AD-overlay:hover{
+    opacity: 1;
+    transition: 0.6s ease-in-out;    
+}
+
+/* ***************** */
+
+.right-div-bio-AD{
+    /* background: rgba(151, 151, 255, 0.596); */
+    height: 500px;
+    width: 46%;
+    position: absolute;
+    right: 17px;
+    overflow: hidden;
+}
+
+.right-div-bio-AD img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+    transition: 0.6s ease-out; 
+}
+
+.right-div-bio-AD:hover img{
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+
+
+/* ************** ROSTER SECTION ************** */
+
+.roster-title{
+    height: 125px;
+    width: 100%;
+    background: #E9E5E2;
+}
+
+.roster-title h1{
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 2px 2px #FCB924;
+    text-transform: uppercase;
+    padding: 25px 0;
+}
+
+.roster-banner{
+    position: relative;
+}
+
+.roster-banner img{
+    position: relative;
+    width: 100%;
+    display:block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    /* padding-top: 14px; */
+}
+
+
+/* ********* LEBRON CARD ********* */
+
+.lebron-card{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* background: rgba(255, 0, 0, 0.322); */
+    top: 290px;
+    left: 580px;
+    border-radius: 50%;
+    transition: 0.6s ease-out;  
+}
+/* 
+.roster-banner .lebron-pop{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -290px;
+    left: -33%;
+    width: 230%;    
+} */
+
+.lebron-card:hover img{
+    opacity: 1;
+    position: absolute;
+    top: 150px;
+    left: 0%;
+    width: 141px;
+    transition: all 0.7s;    
+}
+
+
+.lebron-card img:hover{
+    transform: scale(1.3);
+    transition: all 0.7s;
+}
+
+
+.player-lebron .lebron-info p{
+    opacity: 1;
+    transition: all 1s;
+    color: var(--lakerPurple);
+}
+
+
+ .player-lebron{
+    background: var(--lakerYellow);
+    border: 1px solid;
+    border-radius: 10px;
+    width: 155px;
+    height: 125px;
+    padding: 15px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 20px;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-lebron:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+/* ***************** AD CARD ***************** */
+
+.AD-card{
+    position: absolute;
+    width: 165px;
+    height: 140px;
+    /* background: rgba(255, 0, 0, 0.322); */
+    top: 290px;
+    left: 770px;
+    border-radius: 50%;
+    transition: 0.6s ease-out; 
+}
+
+.roster-banner .AD-pop{
+    opacity: 0;
+    position: absolute;    
+}
+/* 
+.AD-card:hover img{
+    opacity: 1;
+    position: absolute;
+    top: 150px;
+    left: 0%;
+    width: 141px;
+    transition: all 0.7s;
+} */
+
+/* .AD-card img:hover{
+    transform: scale(1.3);
+    transition: all 0.7s;
+} */
+
+.player-AD .AD-info p{
+    opacity: 1;
+    transition: all 1s;
+    color: var(--lakerPurple);
+}
+
+ .player-AD{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: var(--lakerYellow); 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 165px;
+    height: 125px;
+    padding: 15px 10 10 20;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-AD:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+/* ***************** CARUSO CARD *************** */
+
+.caruso-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(81, 255, 0, 0.322); */
+    top: 250px;
+    left: 1010px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-caruso .caruso-info p{
+    opacity: 1;
+    transition: all 1s;
+    color: rgba(56, 21, 77, 0.856);
+    /* color: #FAE330; */
+}
+
+ .player-caruso{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-caruso:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+
+
+/* *************** DWIGHT HOWARD CARD ******** */
+.dwight-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(255, 0, 0, 0.322); */
+    top: 175px;
+    left: 686px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-dwight .dwight-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-dwight{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-dwight:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+
+/* *************** JAVALE MCGEE CARD ******** */
+.javale-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(240, 193, 65, 0.322); */
+    top: 250px;
+    left: 1200;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-javale .javale-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-javale{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-javale:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+/* *************** RAJON RONDO CARD ******** */
+.rondo-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(255, 27, 236, 0.322); */
+    top: 300px;
+    left: 320;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-rondo .rondo-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-rondo{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-rondo:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+/* *************** DANNY GREEN CARD ******** */
+.danny-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(27, 107, 255, 0.322); */
+    top: 205px;
+    left: 430px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-danny .danny-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-danny{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-danny:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+/* *************** CALDWELL POPE CARD ******** */
+.pope-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(55, 245, 55, 0.65); */
+    top: 210px;
+    left: 900px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-pope .pope-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-pope{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-pope:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+/* *************** KYLE KUZMA CARD ******** */
+.kuz-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(55, 245, 55, 0.65); */
+    top: 290px;
+    left: 90px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-kuz .kuz-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-kuz{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-kuz:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+/* *************** AVERY BRADLEY CARD ******** */
+.bradley-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(55, 245, 55, 0.65); */
+    top: 160px;
+    left: 220px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-bradley .bradley-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-bradley{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-bradley:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+
+/* *************** DEMARCUS COUSINS  CARD ******** */
+.demarcus-card{
+    position: absolute;
+    width: 145px;
+    height: 135px;
+    /* background: rgba(55, 245, 55, 0.65); */
+    top: 110px;
+    left: 290px;
+    right: 240px;
+    border-radius: 50%;
+}
+
+
+.player-demarcus .demarcus-info p{
+    opacity: 1;
+    transition: all 1s;
+    /* color: rgba(56, 21, 77, 0.856); */
+    /* color: #FAE330; */
+}
+
+ .player-demarcus{
+    /* background: rgba(56, 21, 77, 0.856);  */
+    background: #FAE330; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 125px;
+    padding: 10px 10 10 20;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.7s;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.player-demarcus:hover{
+    transition: all 1s;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.player-name{
+    font-weight: 600;
+}
+
+
+/* ***************** CARD OVERLAY ************* */
+
+.overlay-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.0); /*dim the background*/    
+    transition: 0.6s ease-out;   
+}
+
+.overlay-card:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+/* *************** PLAYER-INFO CARD **************** */
+
+.player-info{
+    background: #E9E5E2; 
+    border: 1px solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    padding: 25px 10 10 20;
+    position: relative;
+    /* top: 20px; */
+    top: 375px;
+    left: 20px;
+    opacity: 0;
+}
+
+/* .player-info .caruso-info p{
+    opacity: 0;
+    transition: all 0.7s;
+} */
+
+.player-info:hover{
+    transition: all 2s;
+    opacity: 1;
+}
+
+/* .player-info .caruso-info p{
+    opacity: 0;
+    transition: all 2.5s;
+} */
+
+
+
+
+
+/* ************** STAPLES LOCATION *************** */
+.staples-title{
+    color: #D81C2B;
+}
+
+.staples-location{
+    position: relative;
+    padding: 20px 0 20px 0;
+}
+
+.frame-div-left{
+     margin: 0 auto;
+     width: 50%;
+     float: left;
+     padding-top: 30px;
+}
+
+.frame-item{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 86%;
+}
+
+.frame-text{
+    width: 39%;
+    display: inline-block;
+    margin-left: 70px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* show text on hover with overlay */
+/* .overlay-card:hover{
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
